@@ -116,7 +116,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 .hp-ico{width:34px;height:34px;object-fit:contain;flex:none;transition:filter var(--dur-base) var(--ease-brand)}
 .hp-btn .ico{width:24px;height:24px}
 @media (hover:hover) and (pointer:fine){
-  .hp-btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(4,15,70,.45);background:#C2D9FF;color:#103AD8;text-decoration:none}
+  .hp-btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(4,15,70,.45);background:#4168FF;color:#fff;text-decoration:none}
+  .hp-btn:hover .hp-ico{filter:brightness(0) invert(1)}
 }
 .hp-btn:active{transform:translateY(1px) scale(.99)}
 /* CTA clickeado / pulsado: relleno #4168FF, texto e icono blancos */
@@ -358,7 +359,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 /* CTA blanco para usar sobre el hero azul */
 .btn--white{background:#fff;color:var(--color-brand);box-shadow:0 10px 30px -8px rgba(4,15,70,.35)}
 @media (hover:hover) and (pointer:fine){
-  .btn--white:hover{background:#F3F5FF;box-shadow:0 16px 40px -10px rgba(4,15,70,.45)}
+  .btn--white:hover{background:#779BFF;color:#fff;box-shadow:0 16px 40px -10px rgba(4,15,70,.45)}
 }
 
 /* Tira de confianza bajo el CTA del hero */
