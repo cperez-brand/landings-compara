@@ -359,7 +359,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 /* CTA blanco para usar sobre el hero azul */
 .btn--white{background:#fff;color:var(--color-brand);box-shadow:0 10px 30px -8px rgba(4,15,70,.35)}
 @media (hover:hover) and (pointer:fine){
-  .btn--white:hover{background:#779BFF;color:#fff;box-shadow:0 16px 40px -10px rgba(4,15,70,.45)}
+  .btn--white:hover{background:#4168FF;color:#fff;box-shadow:0 16px 40px -10px rgba(4,15,70,.45)}
 }
 
 /* Tira de confianza bajo el CTA del hero */
