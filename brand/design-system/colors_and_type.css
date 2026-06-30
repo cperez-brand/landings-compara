@@ -171,7 +171,7 @@ a:hover { color: var(--color-brand); text-decoration: underline; }
 }
 .btn:active { transform: translateY(1px) scale(0.99); }
 .btn--primary { background: var(--color-brand);        color: #fff; box-shadow: var(--shadow-soft); }
-.btn--primary:hover { background: #4168FF; box-shadow: var(--shadow-lifted); }
+.btn--primary:hover { background: #4168FF; color: #fff; box-shadow: var(--shadow-lifted); }
 .btn--secondary { background: var(--color-primary-100); color: var(--color-brand); }
 .btn--secondary:hover { background: #A9C5FF; }
 .btn--ghost { background: transparent; color: var(--color-brand); box-shadow: inset 0 0 0 1.5px var(--color-brand); }

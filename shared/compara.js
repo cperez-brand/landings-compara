@@ -97,7 +97,9 @@
     var hpBtns = Array.prototype.slice.call(hero.querySelectorAll('.hp-btn'));
     hpBtns.forEach(function(b){
       b.addEventListener('click', function(e){
-        e.preventDefault(); /* prototipo: no navegamos */
+        var href = b.getAttribute('href');
+        if (href && href !== '#') return; /* enlaces reales (p.ej. Auto → auto.html) navegan normal */
+        e.preventDefault(); /* placeholders (#): solo marcan activo, no navegan */
         hpBtns.forEach(function(x){ x.classList.remove('is-active'); });
         b.classList.add('is-active');
       });

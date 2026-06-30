@@ -17,8 +17,8 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a class="nav-logo" href="#" aria-label="Compara, inicio">
-      <img class="logo-white" src="brand/design-system/assets/logo_white.svg" alt="">
-      <img class="logo-blue" src="brand/design-system/assets/logo_blue.svg" alt="">
+      <img class="logo-white" src="brand/design-system/assets/logo_white.svg" alt="Compara">
+      <img class="logo-blue" src="brand/design-system/assets/avatar_favicon.svg" alt="Compara">
     </a>
     <nav aria-label="Principal">
       <ul class="nav-links">
@@ -29,7 +29,7 @@
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn--nav" href="#">Cotiza tu seguro</a>
+      <a class="btn btn--nav" href="https://www.compara.ai/">Conversemos de seguros</a>
     </div>
     <button class="nav-burger" id="burger" aria-expanded="false" aria-controls="navPanel" aria-label="Abrir menú">
       <i data-lucide="menu" class="ico" style="color:currentColor"></i>
@@ -40,7 +40,7 @@
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#ia">Nuestra IA</a>
     <a href="#">El Comparador</a>
-    <a class="btn btn--primary" href="#">Cotiza tu seguro</a>
+    <a class="btn btn--primary" href="https://www.compara.ai/">Conversemos de seguros</a>
   </div>
 </header>
 
@@ -66,28 +66,6 @@
   </div>
 </section>
 
-<!-- ================= ASEGURADORAS ================= -->
-<section class="insurers" id="aseguradoras">
-  <div class="container">
-    <h2 class="reveal">Todas las aseguradoras que importan, <b>en un solo lugar</b></h2>
-    <p class="insurers-sub reveal" style="--i:1">Puedes comparar tus seguros entre las ofertas de las compañías más conocidas de Chile</p>
-  </div>
-  <div class="logo-rail">
-    <div class="logo-cloud" id="logoCloud">
-      <span class="logo-capsule reveal" style="--i:0"><img src="brand/design-system/assets/logo_Consorcio.svg" alt="Consorcio"></span>
-      <span class="logo-capsule reveal" style="--i:1"><img src="brand/design-system/assets/logo_HDI.svg" alt="HDI Seguros"></span>
-      <span class="logo-capsule reveal" style="--i:2"><img src="brand/design-system/assets/logo_Mapfre.svg" alt="Mapfre"></span>
-      <span class="logo-capsule reveal" style="--i:3"><img src="brand/design-system/assets/logo_Zurich.svg" alt="Zurich"></span>
-      <span class="logo-capsule reveal" style="--i:4"><img src="brand/design-system/assets/logo_Sura.svg" alt="Sura"></span>
-      <span class="logo-capsule reveal" style="--i:5"><img src="brand/design-system/assets/logo_Bci.svg" alt="BCI Seguros"></span>
-      <span class="logo-capsule reveal" style="--i:6"><img src="brand/design-system/assets/logo_Cardif.svg" alt="Cardif"></span>
-      <span class="logo-capsule reveal" style="--i:7"><img src="brand/design-system/assets/logo_Reale.svg" alt="Reale Seguros"></span>
-      <span class="logo-capsule reveal" style="--i:8"><img src="brand/design-system/assets/logo_Zenit.svg" alt="Zenit Seguros"></span>
-      <span class="logo-capsule reveal" style="--i:9"><img src="brand/design-system/assets/logo_FID.svg" alt="FID Seguros"></span>
-    </div>
-  </div>
-</section>
-
 <!-- ================= CÓMO FUNCIONA ================= -->
 <section class="how section" id="como-funciona">
   <div class="container">
@@ -97,7 +75,7 @@
       <div class="step reveal scrub" style="--i:0">
         <span class="step-n" aria-hidden="true"></span>
         <h3>Cuéntanos qué necesitas</h3>
-        <p>Tu auto, tu viaje o tu familia. Completar tus datos toma 2 minutos.</p>
+        <p>Tu auto, tu viaje o tu familia. Completar tus datos te toma menos de 5 minutos.</p>
       </div>
       <div class="step reveal scrub" style="--i:1">
         <span class="step-n" aria-hidden="true"></span>
@@ -121,15 +99,22 @@
       <div class="chat-head">
         <img src="brand/design-system/assets/avatar_favicon.svg" alt="">
         <div>
-          <b>Comparini</b>
-          <span>Tu asesora IA · En línea</span>
+          <b>Compa</b>
+          <span>Tu asesor de seguros</span>
         </div>
       </div>
       <div class="chat-body" id="chatBody" aria-hidden="true"></div>
       <p class="sr-only">Demo de conversación: si le pides a Comparini un seguro barato pero bueno, te pregunta qué te preocupa, y te responde con precios, coberturas y deducibles exactos para que tú decidas.</p>
       <div class="chat-foot" aria-hidden="true">
-        <span>Escribe tu pregunta</span>
-        <i><i data-lucide="send" class="ico"></i></i>
+        <div class="chat-input-box">
+          <span class="ph">Quiero saber más de…</span>
+          <div class="chat-input-row">
+            <i data-lucide="paperclip" class="ico chat-attach"></i>
+            <span class="chat-input-spacer"></span>
+            <i data-lucide="mic" class="ico chat-mic"></i>
+            <span class="chat-send"><i data-lucide="arrow-up" class="ico"></i></span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="ai-copy">
@@ -148,7 +133,6 @@
 <!-- TODO: reemplazar por fotografía oficial de marca (cálida, personas reales) -->
 <section class="adband" aria-label="Asistencia en Viaje">
   <img class="photo" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80" alt="Camino abierto visto desde un auto en plena carretera, listo para un viaje largo">
-  <span class="adband-pill"><img src="brand/design-system/assets/logo_blue.svg" alt="Compara"></span>
   <div class="adband-inner">
     <h2 class="reveal">Donde elegir <span class="dserif">mejor</span><br>te lleva lejos.</h2>
     <a class="adband-capsule reveal" style="--i:1" href="#">
@@ -167,13 +151,13 @@
   </div>
   <div class="hwrap" id="hwrap">
     <div class="htrack" id="htrack">
-      <a class="pcard" href="#">
+      <a class="pcard" href="auto.html">
         <span class="chip-feat"><i data-lucide="tag" class="ico"></i>Más cotizado</span>
         <span class="pcard-go"><i data-lucide="arrow-right" class="ico"></i></span>
         <span class="pcard-ico"><img src="brand/design-system/assets/icon_Seguro%20Auto.svg" alt=""></span>
         <div class="pcard-txt">
           <h3>Seguro de Auto</h3>
-          <p>Cobertura completa para tu día a día, desde daños a terceros hasta robo total. Cotiza en 2 minutos.</p>
+          <p>Cobertura completa para tu día a día, desde daños a terceros hasta robo total. Cotiza en 5 minutos.</p>
         </div>
       </a>
       <a class="pcard" href="#">
@@ -181,7 +165,7 @@
         <span class="pcard-ico"><img src="brand/design-system/assets/icon_SOAP.svg" alt=""></span>
         <div class="pcard-txt">
           <h3>SOAP</h3>
-          <p>El obligatorio, listo en 1 minuto y al mejor precio.</p>
+          <p>Contratarlo es obligatorio, pero pagar de más no lo es. Revisa todas las opciones y elige el mejor precio.</p>
         </div>
       </a>
       <a class="pcard" href="#">
@@ -216,7 +200,7 @@
 <section class="closer section">
   <div class="container">
     <span class="editorial reveal">¿Será realmente la mejor opción?</span>
-    <h2 class="reveal" style="--i:1">Deja de dudar. Compara y elige <span class="dserif">mejor</span>.</h2>
+    <h2 class="reveal" style="--i:1">Deja la duda. Compara y elige <span class="dserif">mejor</span>.</h2>
     <a class="btn btn--primary btn--lg reveal" style="--i:2" href="#">Cotiza tu seguro</a>
   </div>
 </section>
@@ -242,7 +226,7 @@
         </ul>
       </div>
       <div>
-        <h3>Compara</h3>
+        <h3>Sobre nosotros</h3>
         <ul>
           <li><a href="#">Quiénes somos</a></li>
           <li><a href="#">El Comparador</a></li>
