@@ -63,6 +63,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 @media (hover:hover) and (pointer:fine){
   .nav .btn--nav:hover{background:#103AD8;color:#fff}
 }
+@media (max-width:860px){
+  .nav .btn--nav{height:35px;padding:0 16px;font-size:12.8px}
+}
 .nav-burger{display:none;margin-left:auto;width:44px;height:44px;border:0;border-radius:var(--radius-md);background:rgba(255,255,255,.14);color:#fff;cursor:pointer;place-items:center}
 .nav-panel{display:none}
 .nav[data-solid]{background:var(--color-surface);box-shadow:0 1px 0 var(--color-border),0 6px 20px rgba(0,133,255,.08)}
@@ -371,6 +374,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 .hero-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:26px}
 .hero-trust span{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-weight:600;font-size:14px;color:rgba(255,255,255,.92)}
 .hero-trust .ico{width:18px;height:18px;color:var(--color-fintech-mint)}
+@media (max-width:860px){
+  .hero-trust{flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:10px;width:fit-content;margin-inline:auto}
+}
 
 /* CTA unico del hero (centra el boton) */
 .hero-cta{display:flex;justify-content:center}
