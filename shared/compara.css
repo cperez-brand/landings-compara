@@ -417,3 +417,26 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 @media (hover:hover) and (pointer:fine){
   .promo-banner:hover{transform:translateY(-2px)}
 }
+
+/* =====================================================================
+   AJUSTES LANDING AUTO (auto.html) — scoped a .nav--minimal / .hero--split
+   (NO afectan el home, que usa .nav / .hero sin modificador).
+   ===================================================================== */
+/* Nav sin "float": el logo queda estatico arriba del hero y se va con el
+   scroll. El markup del nav se conserva; para reactivar el nav flotante a
+   futuro, quitar estas reglas y descomentar el CTA en auto.html. */
+.nav.nav--minimal{position:absolute}
+.nav.nav--minimal[data-solid]{background:transparent;box-shadow:none}
+.nav.nav--minimal[data-solid] .logo-white{opacity:1}
+.nav.nav--minimal[data-solid] .logo-blue{opacity:0}
+/* Logo +20% (26->31 mobile, 31->37 desktop) */
+.nav--minimal .nav-logo img{height:31px}
+@media (min-width:861px){.nav--minimal .nav-logo img{height:37px}}
+/* Hero mas bajo en desktop para que asome el banner promocional */
+.hero.hero--split{min-height:86vh;min-height:86svh;padding-block:92px 56px}
+@media (max-width:860px){
+  /* Mobile: imagen del personaje ARRIBA del texto y el CTA */
+  .hero--split .hero-figure{order:-1}
+  .hero--split .hero-figure img{width:min(68%,290px)}
+  .hero.hero--split{min-height:auto;padding-block:84px 48px}
+}
