@@ -432,11 +432,24 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
 /* Logo +20% (26->31 mobile, 31->37 desktop) */
 .nav--minimal .nav-logo img{height:31px}
 @media (min-width:861px){.nav--minimal .nav-logo img{height:37px}}
+/* Logo cara de Compa: solo mobile (desktop mantiene el wordmark) */
+.nav--minimal .nav-logo .logo-compa{display:none}
+/* La imagen del hero enlaza al mismo formulario que el CTA (clickeable en desktop y mobile) */
+.hero--split .hero-figure-link{text-decoration:none;cursor:pointer}
 /* Hero mas bajo en desktop para que asome el banner promocional */
 .hero.hero--split{min-height:86vh;min-height:86svh;padding-block:92px 56px}
 @media (max-width:860px){
-  /* Mobile: imagen del personaje ARRIBA del texto y el CTA */
-  .hero--split .hero-figure{order:-1}
-  .hero--split .hero-figure img{width:min(68%,290px)}
+  /* Logo mobile = cara de Compa, mismo alto de referencia (31px, heredado de arriba) */
+  .nav--minimal .nav-logo .logo-white,
+  .nav--minimal .nav-logo .logo-blue{display:none}
+  .nav--minimal .nav-logo .logo-compa{display:block}
+  /* Imagen del personaje ARRIBA del texto; subida 10px y 20px de gap con el texto */
+  .hero--split .hero-content{gap:20px}
+  .hero--split .hero-figure{order:-1;margin-top:-10px}
+  /* Centrado real (el <picture> inline la desplazaba a la izquierda) + tamano (+20% x2: 68->82->98%) */
+  .hero--split .hero-figure picture{display:block;width:100%}
+  .hero--split .hero-figure img{width:min(98%,418px);margin-inline:auto}
+  /* CTA del hero fuera: la imagen (con boton incrustado) es el nuevo CTA */
+  .hero--split .hero-cta{display:none}
   .hero.hero--split{min-height:auto;padding-block:84px 48px}
 }

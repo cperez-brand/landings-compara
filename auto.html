@@ -19,6 +19,8 @@
     <a class="nav-logo" href="https://www.comparaonline.cl" aria-label="ComparaOnline, inicio">
       <img class="logo-white" src="brand/design-system/assets/logo_white.svg" alt="Compara">
       <img class="logo-blue" src="brand/design-system/assets/avatar_favicon.svg" alt="Compara">
+      <!-- Logo solo-mobile: personaje Compa (cara). Desktop mantiene el wordmark. -->
+      <img class="logo-compa" src="assets/bc-compa-feliz.svg" alt="Compara">
     </a>
     <!-- CTA del nav oculto temporalmente (landing puente). Para reactivarlo, descomenta este bloque:
     <div class="nav-cta">
@@ -50,11 +52,15 @@
         <span><i data-lucide="check" class="ico"></i>En 5 minutos</span>
       </div>
     </div>
-    <!-- Imagen promocional (personaje + cartel "Hasta 20%"). El círculo celeste se ve aunque falte el PNG. -->
-    <!-- TODO: soltar archivo PNG transparente en prototypes/assets/promo-auto-hero.png -->
-    <div class="hero-figure hero-enter" style="--i:2">
-      <img src="assets/promo-auto-hero.png" alt="Hasta 20% de descuento en tu Seguro de Auto por 12 meses" onerror="this.style.display='none'">
-    </div>
+    <!-- Imagen promocional (personaje + cartel "Hasta 20%").
+         Mobile: imagen propia con el boton "Cotiza" incrustado; toda la imagen es el CTA (data-cotiza).
+         Desktop: imagen sin boton; el CTA es el boton .hero-cta de arriba (imagen no clickeable, ver CSS). -->
+    <a class="hero-figure hero-figure-link hero-enter" style="--i:2" href="#" data-cotiza aria-label="Cotiza tu Seguro de Auto">
+      <picture>
+        <source media="(max-width:860px)" srcset="assets/promo-auto-hero-mobile.png">
+        <img src="assets/promo-auto-hero.png" alt="Hasta 20% de descuento en tu Seguro de Auto por 12 meses" onerror="this.style.display='none'">
+      </picture>
+    </a>
   </div>
 </section>
 
