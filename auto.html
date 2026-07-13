@@ -52,14 +52,11 @@
         <span><i data-lucide="check" class="ico"></i>En 5 minutos</span>
       </div>
     </div>
-    <!-- Imagen promocional (personaje + cartel "Hasta 20%").
-         Mobile: imagen propia con el boton "Cotiza" incrustado; toda la imagen es el CTA (data-cotiza).
-         Desktop: imagen sin boton; el CTA es el boton .hero-cta de arriba (imagen no clickeable, ver CSS). -->
+    <!-- Imagen promocional (personaje + cartel "Hasta 20%"), misma en desktop y mobile.
+         Imagen y boton .hero-cta llevan al mismo formulario (ambos data-cotiza).
+         Mobile reordena via CSS: imagen -> CTA -> titulo -> bajada -> bullets. -->
     <a class="hero-figure hero-figure-link hero-enter" style="--i:2" href="#" data-cotiza aria-label="Cotiza tu Seguro de Auto">
-      <picture>
-        <source media="(max-width:860px)" srcset="assets/promo-auto-hero-mobile.png">
-        <img src="assets/promo-auto-hero.png" alt="Hasta 20% de descuento en tu Seguro de Auto por 12 meses" onerror="this.style.display='none'">
-      </picture>
+      <img src="assets/promo-auto-hero.png" alt="Hasta 20% de descuento en tu Seguro de Auto por 12 meses" onerror="this.style.display='none'">
     </a>
   </div>
 </section>

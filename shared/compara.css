@@ -443,13 +443,20 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
   .nav--minimal .nav-logo .logo-white,
   .nav--minimal .nav-logo .logo-blue{display:none}
   .nav--minimal .nav-logo .logo-compa{display:block}
-  /* Imagen del personaje ARRIBA del texto; subida 10px y 20px de gap con el texto */
+  /* Imagen del personaje ARRIBA (subida 10px, 20px de gap con lo que sigue) */
   .hero--split .hero-content{gap:20px}
   .hero--split .hero-figure{order:-1;margin-top:-10px}
-  /* Centrado real (el <picture> inline la desplazaba a la izquierda) + tamano (+20% x2: 68->82->98%) */
-  .hero--split .hero-figure picture{display:block;width:100%}
-  .hero--split .hero-figure img{width:min(98%,418px);margin-inline:auto}
-  /* CTA del hero fuera: la imagen (con boton incrustado) es el nuevo CTA */
-  .hero--split .hero-cta{display:none}
+  .hero--split .hero-figure img{width:min(82%,348px)}
+  /* Orden mobile: imagen -> CTA -> titulo -> bajada -> bullets.
+     El CTA vuelve como boton real (mejor affordance + tracking consistente);
+     imagen y boton llevan al mismo formulario (ambos data-cotiza). */
+  .hero--split .hero-copy{display:flex;flex-direction:column;align-items:center}
+  .hero--split .hero-copy .hero-cta{order:-1;margin-bottom:28px}
+  /* Reveal coherente de arriba hacia abajo con el nuevo orden */
+  .hero--split .hero-figure.hero-enter{animation-delay:0ms}
+  .hero--split .hero-cta.hero-enter{animation-delay:90ms}
+  .hero--split .hero-copy h1.hero-enter{animation-delay:180ms}
+  .hero--split .hero-sub.hero-enter{animation-delay:270ms}
+  .hero--split .hero-trust.hero-enter{animation-delay:360ms}
   .hero.hero--split{min-height:auto;padding-block:84px 48px}
 }
