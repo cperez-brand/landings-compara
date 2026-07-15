@@ -225,4 +225,25 @@
       }, {threshold:.35}).observe(chatEl);
     }
   }
+
+  /* ---------- CTA sticky (mobile): aparece al perder de vista el CTA del hero,
+       se oculta al llegar al CTA final. Visibilidad real la controla el CSS
+       (solo <=860px). Se autoactiva solo si existe .cta-sticky. --------------- */
+  var sticky = document.querySelector('.cta-sticky');
+  if (sticky && 'IntersectionObserver' in window){
+    var heroCtaEl = document.querySelector('.hero .hero-cta');
+    var closerEl = document.querySelector('.closer');
+    var heroCtaSeen = !!heroCtaEl;   /* al tope de la pagina el CTA del hero se ve */
+    var closerSeen = false;
+    var syncSticky = function(){ sticky.classList.toggle('is-visible', !heroCtaSeen && !closerSeen); };
+    if (heroCtaEl){
+      new IntersectionObserver(function(e){ heroCtaSeen = e[0].isIntersecting; syncSticky(); }, {threshold:0}).observe(heroCtaEl);
+    } else {
+      heroCtaSeen = false; /* sin CTA de hero, el sticky puede mostrarse */
+    }
+    if (closerEl){
+      new IntersectionObserver(function(e){ closerSeen = e[0].isIntersecting; syncSticky(); }, {threshold:0}).observe(closerEl);
+    }
+    syncSticky();
+  }
 })();

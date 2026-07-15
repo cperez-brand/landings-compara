@@ -460,3 +460,32 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:none;box-s
   .hero--split .hero-trust.hero-enter{animation-delay:360ms}
   .hero.hero--split{min-height:auto;padding-block:84px 48px}
 }
+
+/* =====================================================================
+   CTA STICKY (solo mobile) — aparece al perder de vista el CTA del hero,
+   se oculta al llegar al CTA final. Misma URL (data-cotiza). Reutilizable.
+   Sin frosted glass: barra blanca solida + sombra azulada suave hacia arriba.
+   ===================================================================== */
+.cta-sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  display:none; /* desktop: nunca aparece */
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+  background:var(--color-surface);
+  border-top:1px solid var(--color-border);
+  box-shadow:0 -10px 30px -12px rgba(4,15,70,.28);
+}
+.cta-sticky .btn{width:100%}
+@media (max-width:860px){
+  .cta-sticky{
+    display:block;
+    transform:translateY(120%);opacity:0;visibility:hidden;pointer-events:none;
+    transition:transform var(--dur-base) var(--ease-brand),opacity var(--dur-base) var(--ease-brand),visibility 0s linear var(--dur-base);
+  }
+  .cta-sticky.is-visible{
+    transform:none;opacity:1;visibility:visible;pointer-events:auto;
+    transition:transform var(--dur-base) var(--ease-brand),opacity var(--dur-base) var(--ease-brand);
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .cta-sticky{transition:none!important}
+}
